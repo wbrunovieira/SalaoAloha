@@ -34,9 +34,28 @@ Table of Content:
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 /* general */
 body {
-  background: #fff;
+  background-image: linear-gradient(
+    120deg,
+    #ed3327 0%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
   color: #242424;
   font-size: 15px;
   font-weight: 400;
@@ -122,7 +141,7 @@ p {
 }
 
 .hb-fill-right:before {
-  background: #ffb937 !important;
+  background: #f03355 !important;
   color: #fff !important;
 }
 
@@ -265,7 +284,7 @@ p {
 }
 
 .about .col {
-  background: #ffc239;
+  background: #ed3237;
 }
 
 .about img {
@@ -312,21 +331,19 @@ p {
 
 /* home intro */
 
-#meuVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; /* Garante que o vídeo fique atrás do conteúdo */
+/* home intro */
+.wrapper-intro {
+  background: url('../images/bg-intro.jpg');
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-attachment: scroll, scroll;
+  background-size: auto, auto;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-.wrapper-intro {
-  width: 100%; /* ou a largura desejada */
-  height: 100vh; /* ou a altura desejada */
-  position: relative;
-  overflow: hidden;
-}
 .home-intro {
   position: relative;
   padding: 180px 0 120px !important;
@@ -338,7 +355,7 @@ p {
 }
 
 .home-intro .content .button-intro {
-  border: 2px solid #ed3237;
+  border: 2px solid #792990;
   background: transparent;
   padding: 10px 30px;
 }
@@ -348,7 +365,7 @@ p {
 }
 
 .home-intro .content .button {
-  background: #ed3237;
+  background: #fff;
 }
 
 .home-intro .content-text {
@@ -376,8 +393,12 @@ p {
   left: 12px;
 }
 
+.home-intro .button {
+  color: #ed3237;
+}
+
 .home-intro .button:hover {
-  color: #333;
+  color: #1e1e1e;
 }
 
 .home-intro .hb-fill-right:before {
@@ -387,20 +408,7 @@ p {
 
 .home-intro:before {
   width: 45%;
-  background-image: linear-gradient(53deg, #ed3237, #ffffff);
-  background-size: 100% 100%;
-  animation: gradient 1s ease infinite;
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  background-image: linear-gradient(133deg, #fff, #ed3327);
   height: 100%;
   position: absolute;
   content: '';
@@ -410,14 +418,14 @@ p {
 
 .home-intro h5 {
   color: #fff;
-  font-size: 26px;
+  font-size: 14px;
   margin-bottom: 32px;
   font-weight: 600;
 }
 
 .home-intro h2 {
   color: #fff;
-  font-size: 62px;
+  font-size: 52px;
   font-weight: 700;
   margin: 25px 0;
   line-height: 54px;
@@ -426,10 +434,11 @@ p {
 
 .home-intro h6 {
   color: #fff;
-  line-height: 35px;
+  line-height: 25px;
   font-size: 17px;
   margin-bottom: 15px;
-  width: 60%;
+  width: 40%;
+  font-weight: 300;
 }
 
 .home-intro img {
@@ -464,7 +473,7 @@ p {
 }
 
 .title-section h3 span {
-  color: #ffc239;
+  color: #dd3237;
 }
 
 .title-section-left {
@@ -477,7 +486,7 @@ p {
 }
 
 .title-section-left h3 span {
-  color: #ffc239;
+  color: #dd3237;
 }
 
 .title-section p {
@@ -490,7 +499,7 @@ p {
 .title-section p span {
   width: 50px;
   height: 3px;
-  background: #ffc239;
+  background: #dd3237;
   display: block;
   display: inline-block;
   position: relative;
@@ -512,11 +521,13 @@ p {
 }
 
 .services .content {
-  background: #fff;
+  background-size: cover; /* Faz com que a imagem cubra toda a div */
+  background-position: center; /* Centraliza a imagem na div */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 12px 30px -15px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #792990;
+  border-left: 4px solid #ed3237;
   position: relative;
   transition: 0.6s ease-out;
   right: 100%;
@@ -524,8 +535,24 @@ p {
   z-index: 99;
 }
 
+.services .content1 {
+  background-image: url('../images/produto1.jpg');
+}
+
+.services .content2 {
+  background-image: url('../images/produto2.jpg');
+}
+
+.services .content3 {
+  background-image: url('../images/produto3.jpg');
+}
 .services .content h5 {
   font-weight: 600;
+  color: #ed3237;
+}
+.services .content p {
+  font-weight: 600;
+  color: 11ee1e;
 }
 
 .services .content:after {
@@ -534,7 +561,7 @@ p {
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #792990;
+  background: rgba(237, 50, 55, 0.5);
   height: 100%;
   transition-duration: 0.6s;
   transition-timing-function: ease-out;
@@ -560,7 +587,7 @@ p {
 
 .services .content i {
   font-size: 54px;
-  color: #792990;
+  color: #ed3237;
 }
 
 .services .content h5 {
@@ -575,7 +602,7 @@ p {
 
 .our-work .content .caption {
   position: absolute;
-  background-color: rgba(255, 194, 57, 0.8);
+  background-color: rgba(237, 50, 55, 0.5);
   top: 0;
   left: 0;
   right: 0;
@@ -607,6 +634,66 @@ p {
   transition: all 0.3s ease;
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+
 /* pricing */
 .pricing .content {
   border-radius: 6px;
@@ -620,7 +707,7 @@ p {
   font-size: 38px;
   font-weight: 600;
   margin: 10px 0 22px;
-  color: #ffc239 !important;
+  color: #dd3237 !important;
 }
 
 .pricing .content li {
