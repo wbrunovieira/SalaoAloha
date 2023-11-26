@@ -105,7 +105,7 @@ p {
 
 /* button */
 .button {
-  background: #ffb937;
+  background: #ed3237;
   padding: 12px 30px;
   font-weight: 500;
   font-size: 15px;
@@ -126,9 +126,19 @@ p {
   color: #fff !important;
 }
 
-/* loader */
-.spinner4 {
-  background: #792990;
+.loader {
+  display: flex;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-mask: linear-gradient(0deg, #000 55%, #0000 0) bottom/100% 18.18%;
+  background: linear-gradient(#f03355 0 0) bottom/100% 0% no-repeat #ddd;
+  animation: l8 2s infinite steps(7);
+}
+@keyframes l8 {
+  100% {
+    background-size: 100% 115%;
+  }
 }
 
 /* navbar */
@@ -136,6 +146,19 @@ p {
   padding: 10px 0;
   transition: 0.5s ease-out;
   background: transparent;
+}
+.navbar-brand .subtitulo {
+  display: block; /* Faz o texto aparecer na linha abaixo */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #999; /* Cor da fonte */
+  /* Adicione mais estilos conforme necessário */
+  margin-top: -10px;
+}
+
+.navbar-brand .textos-navbar {
+  display: inline-block; /* Faz com que o texto fique ao lado do logo */
+  vertical-align: top; /* Alinha o texto com o topo do logo */
+  margin-left: 10px; /* Espaçamento entre o logo e o texto */
 }
 
 .navbar .container-fluid {
@@ -146,14 +169,14 @@ p {
   font-size: 17px;
   margin-left: 12px;
   margin-top: 5px;
-  color: #fff;
+  color: #f1f1f1f;
 }
 
 .navbar .navbar-brand {
-  color: #fff;
+  color: #1f1f1f;
   font-size: 32px;
   padding: 15px 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .navbar .navbar-nav li {
@@ -161,9 +184,13 @@ p {
 }
 
 .navbar .navbar-nav li a {
-  color: #fff;
+  color: #1f1f1f;
   font-weight: 600;
   font-size: 16px;
+}
+
+.navbar .navbar-nav li a:hover {
+  color: #ed3237;
 }
 
 .navbar .navbar-nav li a:last-child {
