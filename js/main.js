@@ -12,7 +12,7 @@ document.querySelectorAll('[data-fancybox="gallery"]').forEach(function(element)
         "close"
       ],
       loop: true,
-      speed: 300,
+      speed: 500,
       transitionEffect: "slide",
       closeBtn: true,
       keyboard: true,
@@ -31,6 +31,38 @@ document.querySelectorAll('[data-fancybox="gallery"]').forEach(function(element)
       }
 
 
+    });
+  });
+
+  document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.hidden, .animate__slideInLeft');
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const elemTop = rect.top;
+      const elemBottom = rect.bottom;
+  
+      // Verifica se o elemento está parcialmente visível
+      const isVisible = (elemTop < window.innerHeight) && (elemBottom >= 0);
+      if (isVisible) {
+        el.classList.remove('hidden');
+        el.classList.add('animate__slideInLeft');
+  
+        // Encontre e anime os elementos internos específicos
+        const innerAnimations = el.querySelectorAll('.animate__rotateInDownLeft');
+        innerAnimations.forEach(innerEl => {
+          innerEl.classList.add('animate__animated');
+        });
+  
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('animate__slideInLeft');
+  
+        // Resetar animações internas
+        const innerAnimations = el.querySelectorAll('.animate__rotateInDownLeft');
+        innerAnimations.forEach(innerEl => {
+          innerEl.classList.remove('animate__animated');
+        });
+      }
     });
   });
   
