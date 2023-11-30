@@ -306,7 +306,7 @@ p {
 
 .about .content span {
   font-size: 16px;
-  color: #fff;
+  color: #ed3237;
   margin-bottom: 22px;
   display: block;
 }
@@ -346,13 +346,15 @@ p {
 
 .home-intro {
   position: relative;
-  padding: 180px 0 120px !important;
+  padding: 100px 0 120px !important;
 }
 
 .home-intro .content {
   z-index: 999;
   position: relative;
 }
+
+
 
 .home-intro .content .button-intro {
   border: 2px solid #792990;
@@ -419,8 +421,8 @@ p {
 .home-intro h5 {
   color: #fff;
   font-size: 14px;
-  margin-bottom: 32px;
-  font-weight: 600;
+  margin-bottom: -20px;
+  font-weight: 300;
 }
 
 .home-intro h2 {
@@ -431,13 +433,18 @@ p {
   line-height: 54px;
   letter-spacing: 1px;
 }
+.highlight {
+  background-color: white; /* Fundo branco */
+  color: red; /* Texto vermelho */
+  padding: 1px 5px; /* Um pouco de espaço interno para não ficar muito apertado */
+}
 
 .home-intro h6 {
   color: #fff;
   line-height: 25px;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 15px;
-  width: 40%;
+  width: 35%;
   font-weight: 300;
 }
 
@@ -466,10 +473,10 @@ p {
 }
 
 .title-section h3 {
-  font-size: 58px;
   font-weight: 700;
+  font-size: 42px;
   margin-bottom: 5px;
-  text-transform: uppercase;
+ 
 }
 
 .title-section h3 span {
@@ -770,7 +777,7 @@ p {
 }
 
 .features .content h5 {
-  margin: 0 0 9px;
+  margin: 0 0 0px;
 }
 
 .features .content .icon {
@@ -786,6 +793,10 @@ p {
 
 .features .content .content-text {
   overflow: hidden;
+}
+
+.features content content-text h5 {
+  margin-bottom: 500px;
 }
 
 /* latest blog */
@@ -1059,7 +1070,7 @@ form textarea {
 /* footer */
 footer {
   text-align: center;
-  background: #111;
+  background-color: #111;
   color: #bbb;
 }
 
