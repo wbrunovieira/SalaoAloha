@@ -655,24 +655,57 @@ p {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilização do botão flutuante do WhatsApp */
+/* Estilização do botão flutuante do WhatsApp */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 40px;
   right: 40px;
   background-color: #25d366;
   color: white;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
   box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Estilização da caixa de mensagem branca */
+.whatsapp-message-box {
+  background-color: white;
+  color: #128C7E;
+  padding: 8px 32px;
+  border-radius: 25px 0 0 25px; /* Bordas arredondadas na esquerda */
+  font-size: 14px;
+  margin-right: -26px; /* Sobreposição do ícone sobre o texto */
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  height: 70px /* Ajuste a altura conforme necessário */
+}
+
+/* Estilização do ícone do WhatsApp */
+.whatsapp-icon {
+  font-size: 30px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
   z-index: 100;
 }
 
-.whatsapp-float i {
-  margin-top: 16px;
+/* Mudar a visibilidade ao passar o mouse */
+.whatsapp-float:hover .whatsapp-icon {
+  background-color: #128c7e;
+  color:#fff;
+  font-size: 32px;
+  
 }
+
+.whatsapp-float:hover .whatsapp-message-box {
+  background-color: #e5e5e5; /* Cor mais
+
 
 /* pricing */
 .pricing .content {

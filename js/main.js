@@ -65,6 +65,19 @@ document.querySelectorAll('[data-fancybox="gallery"]').forEach(function(element)
       }
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    setInterval(function() {
+      var messageBox = document.querySelector('.whatsapp-message-box');
+      messageBox.classList.remove('animate__animated', 'animate__headShake', 'animate__shakeX');
+      
+      // Reforçar o reflow do navegador, necessário para reiniciar a animação
+      void messageBox.offsetWidth;
+      
+      messageBox.classList.add('animate__animated', 'animate__headShake', 'animate__shakeX');
+    }, 10000); 
+  });
+  
   
 
 
