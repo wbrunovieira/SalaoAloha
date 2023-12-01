@@ -79,7 +79,13 @@ document.querySelectorAll('[data-fancybox="gallery"]').forEach(function(element)
   });
   
   
-
+  var animacao = lottie.loadAnimation({
+    container: document.getElementById('calendario-animado'), 
+    renderer: 'svg', 
+    loop: true, 
+    autoplay: true, 
+    path: 'calendar.json' 
+  });
 
  
 

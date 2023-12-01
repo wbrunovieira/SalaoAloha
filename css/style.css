@@ -615,3 +615,10 @@ footer h6 {
 .hidden {
   opacity: 0;
 }
+
+
+#calendario-animado {
+  height: 40px; 
+  width: 40px;  
+  color: #fff;
+}
