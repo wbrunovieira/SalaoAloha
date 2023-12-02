@@ -1,3 +1,4 @@
+User
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
@@ -66,13 +67,18 @@ p {
 
 
 .loader {
+
   display: flex;
   width: 60px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   -webkit-mask: linear-gradient(0deg, #000 55%, #0000 0) bottom/100% 18.18%;
-  background: linear-gradient(#f03355 0 0) bottom/100% 0% no-repeat #ddd;
-  animation: l8 2s infinite steps(7);
+  .loader {
+    background: linear-gradient(to bottom, #f03355, #ddd) no-repeat;
+    background-size: 100% 100%;
+    animation: l8 2s infinite steps(7);
+}
+
 }
 
 @keyframes l8 {
@@ -401,7 +407,7 @@ p {
 }
 .services .content p {
   font-weight: 600;
-  color: 11ee1e;
+  color: #ed3237;
 }
 
 .bg-special {
@@ -552,7 +558,8 @@ p {
 }
 
 .whatsapp-float:hover .whatsapp-message-box {
-  background-color: #e5e5e5; /* Cor mais
+  background-color: #e5e5e5; 
+}
 
 
 /* footer */
@@ -621,4 +628,37 @@ footer h6 {
   height: 40px; 
   width: 40px;  
   color: #fff;
+}
+
+.cookieCard {
+  font-family: 'Arial', sans-serif; 
+  color: #333; 
+  background-color: #f7f7f7 !important; 
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  position: fixed; /* Isto garante que fique fixado na tela */
+  bottom: 0; /* Alinha na parte inferior da janela */
+  left: 0; /* Alinha no lado esquerdo da janela */
+  width: 50%; /* Isto fará com que se estenda pela largura total da janela */
+  z-index: 1000; /* Isto garante que fique por cima de outros elementos */
+}
+
+
+.cookieHeading {
+  font-size: 24px; font-weight: bold; color: rgba(237, 50, 55, 0.5);
+
+}
+
+.cookieDescription {
+  font-size: 16px; margin-top: 10px;
+}
+
+.acceptButton {
+  background-color: rgba(237, 50, 55, 0.5); color: white; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; margin-top: 15px;
+}
+
+.linkCookie {
+  color: rgba(237, 50, 55, 0.5); text-decoration: none;
 }

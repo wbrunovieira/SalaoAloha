@@ -87,6 +87,11 @@ document.querySelectorAll('[data-fancybox="gallery"]').forEach(function(element)
     path: 'calendar.json' 
   });
 
+
+document.querySelector('.acceptButton').addEventListener('click', function() {
+    document.querySelector('.cookieCard').style.display = 'none';
+});
+
  
 
     
