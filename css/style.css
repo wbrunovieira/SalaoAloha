@@ -698,3 +698,20 @@ footer h6 {
 .linkCookie {
   color: rgba(237, 50, 55, 0.5); text-decoration: none;
 }
+
+.map-title {
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  bottom: 0;
+  background: #fff;
+  padding: 10px;
+}
+#location {
+  position: relative;
+  min-height: 240px;
+  min-width: 240px;
+  height: 98%;
+  margin: 5px;
+  border-radius: 10px;
+}
