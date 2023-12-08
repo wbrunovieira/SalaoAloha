@@ -92,58 +92,24 @@ document.querySelector('.acceptButton').addEventListener('click', function() {
     document.querySelector('.cookieCard').style.display = 'none';
 });
 
-// https://freecodez.com
-console.clear();
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('.cardl').forEach(cardl => {
+    cardl.addEventListener('mousemove', e => {
+      const light = cardl.querySelector('.card-lightl');
+      light.style.opacity = 1;
+      light.style.left = `${e.pageX - cardl.getBoundingClientRect().left - 75}px`;
+      light.style.top = `${e.pageY - cardl.getBoundingClientRect().top - 75}px`;
+    });
 
-const cardsContainerl = document.querySelector(".cardsl");
-const cardsContainerInnerl = document.querySelector(".cards__innerl");
-const cardsl = Array.from(document.querySelectorAll(".cardl"));
-const overlayl = document.querySelector(".overlayl");
-
-const applyOverlayMaskl = (e) => {
-  const overlayEl = e.currentTarget;
-  const x = e.pageX - cardsContainerl.offsetLeft;
-  const y = e.pageY - cardsContainerl.offsetTop;
-
-  overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
-};
-
-const createOverlayCtal = (overlayCardl, ctaEl) => {
-  const overlayCtal = document.createElement("div");
-  overlayCtal.classList.add("ctal");
-  overlayCtal.textContent = ctaEl.textContent;
-  overlayCtal.setAttribute("aria-hidden", true);
-  overlayCardl.append(overlayCtal);
-};
-
-const observerl = new ResizeObserver((entries) => {
-  entries.forEach((entry) => {
-    const cardIndexl = cardsl.indexOf(entry.target);
-    let width = entry.borderBoxSize[0].inlineSize;
-    let height = entry.borderBoxSize[0].blockSize;
-
-    if (cardIndex >= 0) {
-      overlay.children[cardIndexl].style.width = `${width}px`;
-      overlay.children[cardIndexl].style.height = `${height}px`;
-    }
+    cardl.addEventListener('mouseleave', () => {
+      const light = cardl.querySelector('.card-lightl');
+      light.style.opacity = 0;
+    });
   });
 });
 
-const initOverlayCardl = (cardEl) => {
-  const overlayCardl = document.createElement("div");
-  overlayCardl.classList.add("cardl");
-  createOverlayCtal(overlayCardl, cardEl.lastElementChild);
-  overlayl.append(overlayCardl);
-  observerl.observe(cardEl);
-};
-
-cardsl.forEach(initOverlayCardl);
-document.body.addEventListener("pointermove", applyOverlayMaskl);
 
 
- 
-
-    
          
 
 
