@@ -1,34 +1,17 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@224&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
 }
 
-/* general */
-
-body {
-  background-image: linear-gradient(
-    120deg,
-    #ed3327 0%,
-    #ffffff 50%,
-    #ffffff 100%
-  );
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-  color: #242424;
-  font-size: 15px;
-  font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
 ul {
@@ -75,11 +58,7 @@ p {
   }
 }
 
-@keyframes l8 {
-  100% {
-    background-size: 100% 115%;
-  }
-}
+
 
 /* navbar */
 .navbar {
@@ -186,17 +165,6 @@ p {
 }
 
 /* home intro */
-.wrapper-intro {
-  background: url('../images/bg-intro.jpg');
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-attachment: scroll, scroll;
-  background-size: auto, auto;
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: right;
-}
 
 .home-intro {
   position: relative;
@@ -204,8 +172,19 @@ p {
 }
 
 .home-intro .content {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   position: relative;
+  width:100%;
+}
+.img-full-width {
+  width: 100%; /* Força a imagem a ocupar 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  padding: 0;
+  margin:0;
+  object-fit: cover;
 }
 
 .home-intro .content .button {
@@ -238,7 +217,7 @@ p {
   content: '';
   z-index: -1;
   top: 50px;
-  left: 12px;
+  left: 180px;
 }
 
 .home-intro .button {
@@ -292,7 +271,7 @@ p {
 
 .home-intro img {
   height: auto;
-  max-width: 100%;
+  max-width: 50%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -634,8 +613,8 @@ footer h6 {
 }
 #coracao {
   position: absolute; /* Posiciona o ícone de forma absoluta */
-  top: 10px; /* Ajuste a posição vertical */
-  right: 10px; /* Ajuste a posição horizontal */
+  top: 15px; /* Ajuste a posição vertical */
+  left: 210px; /* Ajuste a posição horizontal */
   z-index: 10;
 }
 
