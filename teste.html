@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Responsivo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+  <style>* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-fluid, .row {
+    height: 100%;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: nowrap; /* Não permite que os itens da linha se envolvam */
+  }
+  
+  .col-md-6 {
+    flex: 1; /* Faz com que as colunas ocupem o espaço igualmente */
+  }
+  
+  .hero-text {
+    background-image: linear-gradient(133deg, #fff, #ed3327);
+    position: relative;
+    z-index: 0;
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  text-align: center; /
+  }
+ 
+
+.hero-text {
+    padding-top: 40px;
+  background-image: linear-gradient(133deg, #fff, #ed3327);
+  
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  text-align: center;
+  position: relative;
+ 
+}
+
+.after-element {
+  position: absolute;
+  width: 350px;
+  height: calc(100% - 100px);
+  background: #ed3237;
+  top: 600;
+  left: 480px; /* Ajuste este valor para posicionar como desejar */
+  z-index: -1 ;/* Mantém atrás do conteúdo */
+  transform: translateX(-50%); 
+  border: 8px solid #fff;
+  
+  color: #fff;
+}
+
+.col-md-6 {
+      flex: 1; /* Faz com que as colunas ocupem o espaço igualmente */
+    }
+  
+.hero-text::before {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 100%; /* para cobrir todo o .hero-text */
+  background-color: rgba(0, 0, 255); /* ou qualquer cor com transparência */
+  top: 0;
+  left: 0;
+  z-index: 2; /* Entre o .after-element e o .text-content */
+}
+
+.text-content {
+position: relative;
+  z-index: 3;  /* Garante que o texto fique acima do fundo azul */
+  padding: 0 1em; /* Adiciona um pouco de espaço dos lados do texto */
+  padding-top: 40px;
+}
+
+/* ...resto do seu CSS... */
+
+
+/* ...resto do seu CSS... */
+
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+
+
+.hero-image::before { /* Se quiser sobrepor um pouco na imagem */
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: -350px; /* Isso precisa ser ajustado para a largura do after-element para sobrepor na imagem */
+  width: 350px; /* A mesma largura do after-element */
+  height: 100%;
+  background: inherit; /* Isso herda o fundo do .hero-text */
+  z-index: 2; /* Isso assegura que está sobre a imagem, mas abaixo do texto */
+}
+  
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row flex-row align-items-stretch">
+    <div class="col-md-6 hero-text">
+        <div class="after-element"> <!-- Elemento real para o fundo azul -->
+          <div class="text-content">
+            <h5>Atendimento personalizado, Beleza atualizada</h5>
+            <h2>Salão Loha</h2>
+            <p>Aqui no Salão Loha oferecemos uma experiência acolhedora com serviços personalizados de beleza por profissionais qualificados e atualizados com as últimas tendências.</p>
+            <a href="https://wa.me/5511942124242" class="btn btn-primary">Agende agora</a>
+          </div>
+        </div>
+      </div>
+    <div class="col-md-6 hero-image">
+      <img src="/images/bg-intro.jpg" alt="Interior do Salão Loha" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
