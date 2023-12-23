@@ -72,12 +72,12 @@
   background-color: rgba(0, 0, 255); /* ou qualquer cor com transparência */
   top: 0;
   left: 0;
-  z-index: 2; /* Entre o .after-element e o .text-content */
+  z-index: 1; /* Entre o .after-element e o .text-content */
 }
 
 .text-content {
 position: relative;
-  z-index: 3;  /* Garante que o texto fique acima do fundo azul */
+  z-index: 5;  /* Garante que o texto fique acima do fundo azul */
   padding: 0 1em; /* Adiciona um pouco de espaço dos lados do texto */
   padding-top: 40px;
 }

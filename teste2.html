@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seção Hero</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Ou a fonte de sua escolha */
+  }
+
+  .hero-section {
+    display: flex;
+    background-color: #792990; /* Cor de fundo da seção */
+    color: #FFF;
+    position: relative; /* Para o posicionamento absoluto da imagem */
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo textual à direita */
+    width: 100%; /* Ocupa toda a largura da seção */
+    padding: 20px;
+  }
+
+  .hero-text-box {
+    background-color: #FF0000; /* Cor de fundo da caixa de texto vermelha */
+    border: 5px solid #FFF; /* Borda branca */
+    padding: 20px;
+    margin-right: 20%; /* Espaço para a imagem à direita */
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text-box:before {
+    content: "";
+    position: absolute;
+    top: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    left: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    right: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    bottom: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    background-color: #792990; /* Cor da caixa roxa atrás da vermelha */
+    z-index: -1;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    margin-bottom: 20px;
+  }
+
+  .hero-button {
+    background-color: #D50000; /* Cor de fundo do botão */
+    color: #FFF;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado de links */
+    display: inline-block; /* Permite definir padding */
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    bottom: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    right: -20px; /* Ajuste conforme necessário para sobrepor a imagem */
+    z-index: 3;
+  }
+
+  .hero-image {
+    width: 20%; /* Define a largura da imagem */
+    position: absolute; /* Posiciona a imagem absolutamente */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/bg-intro.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      justify-content: center; /* Centraliza o conteúdo para dispositivos móveis */
+    }
+
+    .hero-text-box {
+      margin-right: 0; /* Remove o espaço para a imagem em dispositivos móveis */
+    }
+
+    .hero-image {
+      width: 100%; /* Faz a imagem ocupar a largura total em dispositivos móveis */
+      height: 200px; /* Ajuste para a altura desejada em dispositivos móveis */
+    }
+
+    .hero-button {
+      position: static; /* Reajusta o botão para o fluxo normal */
+      margin-top: 20px; /* Espaço acima do botão */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text-box">
+      <div class="hero-text">
+        <p>Frase de efeito</p>
+        <h1>Nome da empresa</h1>
+        <p>Seu texto personalizado estará aqui, refletindo os valores e missão da sua empresa. Este é um espaço dedicado exclusivamente para a sua mensagem.</p>
+      </div>
+      <a href="#" class="hero-button">Saiba mais</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <!-- A imagem é aplicada via CSS -->
+  </div>
+</div>
+
+</body>
+</html>
