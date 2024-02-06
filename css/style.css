@@ -6,14 +6,37 @@
   box-sizing: border-box;
   font-family: inherit;
   font-size: 100%;
-  color: inherit;
+
+  
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+
+
+ body {
+  
+  
   font-family: Poppins, sans-serif;
+  animation: gradiente 1s ease infinite;
+  background-image: linear-gradient(
+    180deg,
+    #ed3327 0%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  
 }
+@keyframes gradiente {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 
 ul {
   padding: 0;
@@ -101,7 +124,8 @@ p {
 .navbar .navbar-nav li a:hover {
   color: #ed3237;
 }
-.container
+
+
 
 .navbar .navbar-nav li a:last-child {
   padding-right: 0 !important;
@@ -170,36 +194,22 @@ p {
 /* home intro */
 
 .home-intro {
- 
+  position: relative;
   padding: 100px 0 120px !important;
-  max-height: 700px;
+ 
   display:flex;
+
+  
 
 }
 
 .home-intro .content {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  position: relative;
-  width:100%;
-}
-
-.img-side {
-  display: flex;
-  width: 100%;
+ margin-left:200px;
   
-  height: 700px;
+  position: relative;
+  
+}
 
-}
-.img-full-width {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin:0;
-  object-fit: cover;
-}
 
 .home-intro .content .button {
   background: #fff;
@@ -210,19 +220,28 @@ p {
 .home-intro .content-text {
   padding: 20px 0 20px 20px;
 
-  width:50%;
+  
 }
-
+.home-intro:before {
+  width: 350px;
+  background: #ed3237;
+  height: calc(100% - 200px);
+  border: 8px solid #fff;
+  position: absolute;
+  content: '';
+  z-index: -1;
+  margin-left:200px;
+}
 
 .home-intro .content:after {
   width: 350px;
   background: #ed3237;
-  height: calc(100% - 100px);
+  height: calc(100% - 200px);
   position: absolute;
   content: '';
   z-index: -1;
   top: 50px;
-  left: 180px;
+  left: 12px;
 }
 
 .home-intro .button {
@@ -233,20 +252,12 @@ p {
   color: #1e1e1e;
 }
 
-.home-intro:before {
-  width: 45%;
-  background-image: linear-gradient(133deg, #fff, #ed3327);
-  height: auto;
-  position: absolute;
-  content: '';
-  z-index: 999;
-  top: 0;
-}
+
 
 .home-intro h5 {
   color: #fff;
   font-size: 14px;
-  margin-bottom: -20px;
+  
   font-weight: 300;
 }
 
@@ -614,7 +625,7 @@ footer h6 {
 #coracao {
   position: absolute; /* Posiciona o ícone de forma absoluta */
   top: 15px; /* Ajuste a posição vertical */
-  left: 210px; /* Ajuste a posição horizontal */
+  left: 310px; /* Ajuste a posição horizontal */
   z-index: 10;
 }
 
