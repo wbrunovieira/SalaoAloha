@@ -600,14 +600,31 @@ footer ul li {
   margin: 0 8px;
 }
 
+.social:hover {
+  
+}
 footer ul li i {
   color: #fff;
   height: 40px;
   width: 40px;
-  background: #ffc239;
+  background: #dd3237;
   border-radius: 50%;
   padding-top: 12px;
   border: 1px solid transparent;
+  transition: filter 0.2s ease-in-out;
+}
+footer ul li i:hover {
+
+  filter: brightness(0.7) saturate(1.5);
+  height: 44px;
+  width: 44px;
+ 
+  
+}
+
+.wb {
+  font-size:10px;
+  padding:6px
 }
 
 footer ul li i.fa-facebook-f {
