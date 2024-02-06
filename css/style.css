@@ -170,9 +170,11 @@ p {
 /* home intro */
 
 .home-intro {
-  position: relative;
+ 
   padding: 100px 0 120px !important;
   max-height: 700px;
+  display:flex;
+
 }
 
 .home-intro .content {
@@ -187,7 +189,7 @@ p {
 .img-side {
   display: flex;
   width: 100%;
-
+  
   height: 700px;
 
 }
