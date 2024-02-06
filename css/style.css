@@ -368,6 +368,7 @@ p {
   border-left: 4px solid #ed3237;
   position: relative;
   transition: 0.6s ease-out;
+  height:100%;
   right: 100%;
   left: 0;
   z-index: 99;
@@ -384,12 +385,15 @@ p {
 .services .content3 {
   background-image: url('../images/produto3.jpg');
 }
+.services .content4 {
+  background-image: url('../images/produto4.jpg');
+}
 .services .content h5 {
   font-weight: 600;
   color: #ed3237;
 }
 .services .content p {
-  font-weight: 600;
+  font-weight: 400;
   color: #ed3237;
 }
 
