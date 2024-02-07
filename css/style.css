@@ -781,3 +781,10 @@ footer h6 {
     margin-left: 200px;
   }
 }
+#navbarSupportedContent {
+  background-color: transparent !important;
+}
+
+.navbar {
+  opacity: 0.7;
+}
