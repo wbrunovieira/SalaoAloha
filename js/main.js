@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
       'animate__shakeX'
     );
 
-    // Reforçar o reflow do navegador, necessário para reiniciar a animação
     void messageBox.offsetWidth;
 
     messageBox.classList.add(
@@ -90,39 +89,3 @@ var animacao = lottie.loadAnimation({
   autoplay: true,
   path: 'calendar.json',
 });
-
-// document.querySelector('.acceptButton').addEventListener('click', function () {
-//   document.querySelector('.cookieCard').style.display = 'none';
-// });
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('.cardl').forEach((cardl) => {
-    cardl.addEventListener('mousemove', (e) => {
-      const light = cardl.querySelector('.card-lightl');
-      light.style.opacity = 1;
-      light.style.left = `${
-        e.pageX - cardl.getBoundingClientRect().left - 75
-      }px`;
-      light.style.top = `${e.pageY - cardl.getBoundingClientRect().top - 75}px`;
-    });
-
-    cardl.addEventListener('mouseleave', () => {
-      const light = cardl.querySelector('.card-lightl');
-      light.style.opacity = 0;
-    });
-  });
-});
-
-function toggleNavbar() {
-  const navbarSupportedContent = document.getElementById(
-    'navbarSupportedContent'
-  );
-  if (navbarSupportedContent.classList.contains('show')) {
-    navbarSupportedContent.classList.remove('show');
-  } else {
-    navbarSupportedContent.classList.add('show');
-  }
-}
-// document.querySelector('.show').addEventListener('click', function () {
-//   this.classList.toggle('active');
-// });
