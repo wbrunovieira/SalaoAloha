@@ -10,8 +10,6 @@
   
 }
 
-
-
  body {
   
   
@@ -85,17 +83,22 @@ p {
 
 
 /* navbar */
-.navbar {
-  padding: 10px 0;
+.navbarm {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
   transition: 0.5s ease-out;
-  background: transparent;
-  justify-content: space-betwwen;
 }
 .navbar-brand .subtitulo {
   display: block;
   font-size: 18px;
   color: #999;
   margin-top: -10px;
+}
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center; 
 }
 
 .navbar-brand .textos-navbar {
@@ -195,7 +198,7 @@ p {
 
 .home-intro {
   position: relative;
-  padding: 100px 0 120px !important;
+  padding: 10px 0 180px !important;
  
   display:flex;
 
@@ -218,14 +221,14 @@ p {
 
 
 .home-intro .content-text {
-  padding: 20px 0 20px 20px;
+  padding: 6px ;
 
   
 }
 .home-intro:before {
-  width: 350px;
+  width: 400px;
   background: #ed3237;
-  height: calc(100% - 200px);
+  height: calc(100% - 250px);
   border: 8px solid #fff;
   position: absolute;
   content: '';
@@ -234,9 +237,9 @@ p {
 }
 
 .home-intro .content:after {
-  width: 350px;
+  width: 400px;
   background: #ed3237;
-  height: calc(100% - 200px);
+  height: calc(100% - 250px);
   position: absolute;
   content: '';
   z-index: -1;
@@ -292,7 +295,11 @@ p {
   position: relative;
 }
 
-
+.img-hero {
+  height:400px;
+  display:flex;
+  padding:30px;
+}
 
 /* section */
 .section {
@@ -601,9 +608,7 @@ footer ul li {
   margin: 0 8px;
 }
 
-.social:hover {
-  
-}
+
 footer ul li i {
   color: #fff;
   height: 40px;
@@ -809,16 +814,57 @@ footer h6 {
   z-index: 1; /* Garantir que o conteúdo fique acima da luz */
 }
 
-/* Estilos para título, subtítulo, lista e link */
-.card-titlel {
-  /* estilos para h2 */
+
+
+
+.show.active {
+  display: block;
 }
-.card-subtitlel {
-  /* estilos para p */
+
+.show:not(.active) {
+  display: none;
 }
-.card-listl {
-  /* estilos para ul e li */
+
+@media only screen and (max-width: 768px) {
+ .home-intro {
+  flex-direction: column;
+  padding: 10px 0 180px !important;
+  width: 100vh;
+  height: 400px;
+ }
+
+ .home-intro .content {
+  margin-left:100px;
+  margin-top:6px;
+   
+   position: relative;
+
+   
 }
-.card-linkl {
-  /* estilos para a */
+.home-intro:before {
+  margin-top:20px;
+  width: 340px;
+  left:-100px;
+  height: calc(100% - 50px);
+  border: 4px solid #fff;
+  position: absolute;
+  content: '';
+  z-index: -1;
+  margin-left:200px;
+}
+.home-intro .content:after {
+  margin-top:20px;
+  width: 340px;
+  left:-100px;
+  height: calc(100% - 150px);
+  
+  
+  position: absolute;
+  content: '';
+  z-index: -1;
+  margin-left:200px;
+}
+
+
+
 }
