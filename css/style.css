@@ -745,6 +745,30 @@ footer h6 {
   margin: 5px;
   border-radius: 10px;
 }
+@media (max-width: 575.98px) {
+  .content-scaling-sm {
+    transform: scale(0.7) translateX(-25%);
+    display: inline-block;
+    padding: 1px;
+    margin: 1px;
+  }
+  .home-intro {
+    flex-direction: column;
+    padding: 50px !important;
+    width: 100vh;
+    height: 400px;
+  }
+
+  .content-text h6 {
+    word-wrap: break-word;
+    hyphens: auto;
+    width: 50%;
+    margin-top: 6px;
+  }
+  .services {
+    margin-top: 236px;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .navbar-brand img {
