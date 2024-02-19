@@ -66,11 +66,11 @@ p {
   aspect-ratio: 1/1;
   border-radius: 50%;
   -webkit-mask: linear-gradient(0deg, #000 55%, #0000 0) bottom/100% 18.18%;
-  .loader {
-    background: linear-gradient(to bottom, #f03355, #ddd) no-repeat;
-    background-size: 100% 100%;
-    animation: l8 2s infinite steps(7);
-  }
+}
+.loader {
+  background: linear-gradient(to bottom, #f03355, #ddd) no-repeat;
+  background-size: 100% 100%;
+  animation: l8 2s infinite steps(7);
 }
 
 /* navbar */
