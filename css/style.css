@@ -188,7 +188,7 @@ p {
 /* home intro */
 
 .home-intro {
-  margin-top: 100px;
+  margin-top: 150px;
   position: relative;
   padding: 10px 0 180px !important;
   height: 600px;
@@ -743,11 +743,15 @@ footer h6 {
   .content-text h6 {
     word-wrap: break-word;
     hyphens: auto;
-    width: 50%;
+    width: 100%;
     margin-top: 6px;
   }
   .services {
-    margin-top: 236px;
+    margin-top: 436px;
+  }
+  #coracao {
+    left: 300px;
+    top: 85px;
   }
 }
 
