@@ -498,12 +498,11 @@ p {
 }
 
 .our-work .content a:hover img {
-  transform: scale(1.05); /* Aumenta a imagem em 5% */
+  transform: scale(1.05);
   transition: transform 0.3s ease;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilização do botão flutuante do WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 40px;
@@ -519,7 +518,6 @@ p {
   text-decoration: none;
 }
 
-/* Estilização da caixa de mensagem branca */
 .whatsapp-message-box {
   background-color: white;
   color: #128c7e;
@@ -546,7 +544,6 @@ p {
   padding-left: 5px;
 }
 
-/* Estilização do ícone do WhatsApp */
 .whatsapp-icon {
   font-size: 30px;
   background-color: #25d366;
@@ -555,7 +552,6 @@ p {
   z-index: 100;
 }
 
-/* Mudar a visibilidade ao passar o mouse */
 .whatsapp-float:hover .whatsapp-icon {
   background-color: #128c7e;
   color: #fff;
@@ -643,25 +639,10 @@ footer h6 {
   color: #fff;
 }
 #coracao {
-  position: absolute; /* Posiciona o ícone de forma absoluta */
-  top: 15px; /* Ajuste a posição vertical */
-  left: 310px; /* Ajuste a posição horizontal */
+  position: absolute;
+  top: 15px;
+  left: 310px;
   z-index: 10;
-}
-
-.cookieCard {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: #f7f7f7 !important;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Isto garante que fique fixado na tela */
-  bottom: 0; /* Alinha na parte inferior da janela */
-  left: 0; /* Alinha no lado esquerdo da janela */
-  width: 50%; /* Isto fará com que se estenda pela largura total da janela */
-  z-index: 1000; /* Isto garante que fique por cima de outros elementos */
 }
 
 .btn {
@@ -828,7 +809,7 @@ footer h6 {
   }
   .map-mobile iframe {
     width: 100% !important;
-    height: auto !important; /* Ajusta a altura se necessário */
+    height: auto !important;
   }
 
   html,
