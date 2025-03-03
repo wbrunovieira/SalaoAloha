@@ -1,78 +1,54 @@
 <!doctype html>
-<html lang="pt-Br">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salão Loha - Estética e Beleza em Osasco</title>
-    <meta
-      name="description"
-      content="Descubra a beleza em sua essência no Salão Loha. Oferecemos serviços de cabelereiro, manicure, terapia capilar, e depilação em Osasco. Agende sua visita!"
-    />
-    <meta
-      name="keywords"
-      content="Salão de Beleza, Estética, Cabelereiro, Manicure, Terapia Capilar, Depilação, Osasco, Salão Loha"
-    />
-    <meta name="author" content="WB Digital Solutions" />
-    <link rel="icon" href="/images/favicon.png" />
+<html lang="pt-BR">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.min.css"
-    />
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salão Loha - Estética e Beleza em Osasco</title>
+  <meta name="description"
+    content="Descubra a beleza em sua essência no Salão Loha. Oferecemos serviços de cabelereiro, manicure, terapia capilar, e depilação em Osasco. Agende sua visita!" />
+  <meta name="keywords"
+    content="Salão de Beleza, Estética, Cabelereiro, Manicure, Terapia Capilar, Depilação, Osasco, Salão Loha" />
+  <meta name="author" content="WB Digital Solutions" />
+  <link rel="icon" href="/images/favicon.png" />
 
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- loader -->
+  <!-- CSS Externos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.min.css" />
+  <link rel="stylesheet" href="css/fontawesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <!-- end loader -->
-
-    <!-- navbar -->
-
-    <nav
-      class="navbar navbarm navbar-fixed navbar-expand-lg navbar-light bg-light d-flex container-fluid px-5 fixed-top"
-    >
+<body>
+  <!-- Header com Navbar -->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light container-fluid px-5">
       <div class="navbar-left">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
           <i class="fa fa-bars"></i>
         </button>
-        <a
-          href="index.html"
-          class="navbar-brand animate__animated animate__bounce"
-        >
-          <img loading="lazy" src="/images/logo.png" alt="Logo Salão Aloha" />
+        <a href="index.html" class="navbar-brand animate__animated animate__bounce">
+          <img loading="lazy" src="/images/logo.png" alt="Logo Salão Loha" />
           <div class="textos-navbar">
             Salão Loha
             <span class="subtitulo">Estética e Beleza</span>
-          </div></a
-        >
+          </div>
+        </a>
       </div>
-
       <div class="navbar-right">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#inicio">Inicio</a>
+              <a class="nav-link" href="#inicio">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#produtos">Serviços</a>
+              <a class="nav-link" href="#servicos">Serviços</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#destaque">Destaque</a>
@@ -87,11 +63,12 @@
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
+  </header>
 
-    <!-- home intro -->
-
-    <div class="home-intro col-md-12" id="inicio">
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção: Home Intro -->
+    <section id="inicio" class="home-intro d-flex flex-wrap">
       <div class="col-sm-6 col-12 order-md-1 content-scaling-sm">
         <div class="content p-3 content-mb">
           <div class="content-text">
@@ -102,475 +79,307 @@
             <h2 class="animate__animated animate__bounce p-3">Salão Loha</h2>
             <h6>
               Aqui no <strong>Salão Loha</strong> oferecemos uma
-              <span class="highlight mt-0"
-                >experiência acolhedora
-                <lord-icon
-                  src="https://cdn.lordicon.com/igciyimj.json"
-                  trigger="morph"
-                  state="morph-glitter"
-                  id="coracao"
-                  style="width: 40px; height: 40px"
-                >
-                </lord-icon>
-                com serviços personalizados</span
-              >
+              <span class="highlight mt-0">
+                experiência acolhedora
+                <lord-icon src="https://cdn.lordicon.com/igciyimj.json" trigger="morph" state="morph-glitter"
+                  id="coracao" style="width: 40px; height: 40px"></lord-icon>
+                com serviços personalizados
+              </span>
               de beleza por profissionais qualificados e atualizados com as
               últimas tendências.
             </h6>
-
             <a href="https://wa.me/5511942124242" class="btn">
               Agende agora
-              <div
-                style="height: 40px; width: 40px; color: #fff"
-                id="calendario-animado"
-              ></div>
+              <div id="calendario-animado" style="height: 40px; width: 40px; color: #fff"></div>
             </a>
           </div>
         </div>
       </div>
-
-      <div class="col-sm-6 col-12 order-md-2 img-fluid img-mobile">
-        <img
-          src="/images/bg-intro.jpg"
-          loading="lazy"
-          alt="foto do salao"
-          class="img-fluid img-hero"
-          style="width: 100%; overflow: hidden; object-fit: cover"
-        />
+      <div class="col-sm-6 col-12 order-md-2">
+        <img src="/images/bg-intro.jpg" loading="lazy" alt="Foto do Salão Loha" class="img-fluid img-hero"
+          style="width: 100%; overflow: hidden; object-fit: cover" />
       </div>
-    </div>
+    </section>
 
-    <!-- end end intro -->
-
-    <!-- services -->
-    <div
-      class="services section bg-special2 hidden animate__animated"
-      id="produtos"
-    >
+    <!-- Seção: Serviços -->
+    <section id="servicos" class="services section bg-special2 animate__animated">
       <div class="container">
-        <div class="title-section">
-          <h3
-            class="animate__animated animate__slideInLeft d-flex justify-content-center align-items-center"
-          >
+        <div class="title-section text-center">
+          <h3 class="animate__animated animate__slideInLeft">
             Espaço de Beleza e Bem-estar Integral
           </h3>
           <div class="d-flex justify-content-center align-items-center mx-auto">
-            <lord-icon
-              src="https://cdn.lordicon.com/bzrhdlij.json"
-              trigger="hover"
-              style="width: 40px; height: 40px"
-            >
-            </lord-icon>
+            <lord-icon src="https://cdn.lordicon.com/bzrhdlij.json" trigger="hover"
+              style="width: 40px; height: 40px"></lord-icon>
             <p>
-              <span class="line" style="color: #ed3237"></span>Realce sua beleza
-              natural com cuidados que vão da cabeça aos pés
+              <span class="line" style="color: #ed3237"></span>
+              Realce sua beleza natural com cuidados que vão da cabeça aos pés
             </p>
-
-            <lord-icon
-              src="https://cdn.lordicon.com/lsghypdq.json"
-              trigger="hover"
-              stroke="light"
-              colors="primary:#121331,secondary:#e83a30"
-              style="width: 40px; height: 40px"
-            >
-            </lord-icon>
+            <lord-icon src="https://cdn.lordicon.com/lsghypdq.json" trigger="hover" stroke="light"
+              colors="primary:#121331,secondary:#e83a30" style="width: 40px; height: 40px"></lord-icon>
           </div>
         </div>
 
         <div class="row">
-          <div class="col col-md-3 col-sm-12 col-12 content-mobile">
+          <article class="col-md-3 col-sm-12 content-mobile">
             <div class="content content1">
               <i class="fa-cloud-meatball" style="color: #ed3237"></i>
-              <h5 class="">Cabelereiro</h5>
-              <p class="mb-0">
-                <br />
-                <br />Ir ao cabelereiro é um ato de amor próprio.
-                <br /><br />Nada como tirar um tempinho para cuidar da gente.
+              <h5>Cabelereiro</h5>
+              <p>
+                Ir ao cabelereiro é um ato de amor próprio.<br />
+                Nada como tirar um tempinho para cuidar da gente.
               </p>
             </div>
-          </div>
-          <div class="col col-md-3 col-sm-12 col-12 content-mobile">
-            <div class="content content2 content-center">
+          </article>
+          <article class="col-md-3 col-sm-12 content-mobile">
+            <div class="content content2 text-center">
               <i class="fa-cloud-meatball" style="color: #ed3237"></i>
-              <h5 class="">Manicure</h5>
-              <p class="mb-0">
-                Qual é a importancia da manicure?<br /><br />
-                Unhas limpas e bem cuidadas é sinônimo de higiêne e auto
-                cuidado.È inegãvel que as unhas têm papel fundamental na beleza,
-                bem-estar e autoestima das mulheres.
+              <h5>Manicure</h5>
+              <p>
+                Unhas limpas e bem cuidadas são sinônimo de higiene e autocuidado.
               </p>
             </div>
-          </div>
-          <div class="col col-md-3 col-sm-12 col-12 content-mobile">
+          </article>
+          <article class="col-md-3 col-sm-12 content-mobile">
             <div class="content content3">
               <i class="fa-cloud-meatball" style="color: #ed3237"></i>
-              <h5 class="">O que é terapia capilar</h5>
-              <p class="mb-0">
-                A terapia capilar é uma abordagem holística de cuidado com os
-                cabelos que combina tratamentos naturais e tecnologia avançada
-                para tratar o cabelo, couro cabeludo e bem-estar emocional,
-                promovendo saúde integrada.
+              <h5>O que é terapia capilar</h5>
+              <p>
+                Uma abordagem holística que une tratamentos naturais e
+                tecnologia avançada para cuidar do cabelo e couro cabeludo.
               </p>
             </div>
-          </div>
-          <div class="col col-md-3 col-sm-12 col-12 content-mobile">
+          </article>
+          <article class="col-md-3 col-sm-12 content-mobile">
             <div class="content content4">
               <i class="fa-cloud-meatball" style="color: #ed3237"></i>
-              <h5 class="">Depilação</h5>
-              <p class="mb-0">
-                Além de promover uma pele mais lisa e suave, essa prática realça
-                a beleza e contribui para uma sensação de frescor e conforto.
+              <h5>Depilação</h5>
+              <p>
+                Proporciona uma pele mais lisa e suave, realçando a beleza e
+                transmitindo uma sensação de frescor.
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
-    <!-- end services -->
+    </section>
 
-    <!-- about -->
-    <div class="about bg-special2 hidden animate__animated">
+    <!-- Seção: Destaque / About -->
+    <section id="destaque" class="about bg-special2 animate__animated">
       <div class="container">
-        <div class="row no-gutters">
-          <div class="col col-md-6 col-sm-12">
-            <img
-              src="images/about.jpg"
-              loading="lazy"
-              alt="sala de esterilização"
-              class="w-100"
-            />
+        <div class="row g-0">
+          <div class="col-md-6 col-sm-12">
+            <img src="images/about.jpg" loading="lazy" alt="Sala de Esterilização" class="w-100" />
           </div>
-          <div class="col col-md-6 col-sm-12" id="destaque">
-            <div class="content">
-              <div class="d-flex p-lg-5">
-                <h3 class="animate__animated animate__slideInLeft">
-                  O Poder da Esterilização:
-                </h3>
-                <lord-icon
-                  src="https://cdn.lordicon.com/dnfmiyuo.json"
-                  trigger="hover"
-                  stroke="light"
-                  colors="primary:#121331,secondary:#f4a09c,tertiary:#ebe6ef,quaternary:#92140c"
-                  style="width: 60px; height: 60px"
-                >
-                </lord-icon>
-              </div>
-              <span class="highlight"
-                >Eliminando Microorganismos para um Ambiente Seguro</span
-              >
-
-              <p class="text-desint">
-                A esterilização é um método essencial que tem como objetivo
-                eliminar todas as formas de vida microbiana, incluindo vírus,
-                bactérias, fungos e outros organismos, que podem contaminar
-                instrumentos, materiais e objetos. <br /><br />
-                Esse processo é fundamental, especialmente em ambientes médicos
-                e laboratoriais, para garantir a segurança e higiene. Utilizando
-                uma autoclave, um equipamento especializado, a esterilização é
-                realizada de forma eficaz, assegurando que os materiais sejam
-                seguros para uso sem riscos de contaminação.
+          <div class="col-md-6 col-sm-12">
+            <div class="content p-lg-5">
+              <h3 class="animate__animated animate__slideInLeft">
+                O Poder da Esterilização:
+              </h3>
+              <lord-icon src="https://cdn.lordicon.com/dnfmiyuo.json" trigger="hover" stroke="light"
+                colors="primary:#121331,secondary:#f4a09c,tertiary:#ebe6ef,quaternary:#92140c"
+                style="width: 60px; height: 60px"></lord-icon>
+              <span class="highlight">
+                Eliminando Microorganismos para um Ambiente Seguro
+              </span>
+              <p>
+                A esterilização elimina todas as formas de vida microbiana,
+                garantindo segurança e higiene. Utilizamos autoclave para
+                assegurar a eficácia do processo.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- emd about -->
+    </section>
 
-    <!-- our work -->
-    <div class="our-work hidden animate__animated">
-      <div class="container" id="portfolio">
-        <div class="title-section">
-          <div class="d-flex foto-title">
-            <h3 class="animate__animated animate__slideInLeft">
-              Galeria de Fotos
-            </h3>
-            <lord-icon
-              src="https://cdn.lordicon.com/bmlkvhui.json"
-              trigger="hover"
-              colors="primary:#121331,secondary:#3a3347,tertiary:#e83a30,quaternary:#ebe6ef,quinary:#e83a30,senary:#911710,septenary:#f24c00"
-              style="width: 40px; height: 40px"
-            >
-            </lord-icon>
-          </div>
+    <!-- Seção: Portfólio -->
+    <section id="portfolio" class="our-work animate__animated">
+      <div class="container">
+        <div class="title-section text-center">
+          <h3 class="animate__animated animate__slideInLeft">Galeria de Fotos</h3>
+          <lord-icon src="https://cdn.lordicon.com/bmlkvhui.json" trigger="hover"
+            colors="primary:#121331,secondary:#3a3347,tertiary:#e83a30,quaternary:#ebe6ef,quinary:#e83a30,senary:#911710,septenary:#f24c00"
+            style="width: 40px; height: 40px"></lord-icon>
           <p class="highlight">
             <span class="line"></span> Conheça um pouco mais
           </p>
         </div>
 
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work1.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 1"
-              >
-                <img loading="lazy" src="images/work1.jpg" alt="" />
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work1.jpg" data-fancybox="gallery" data-caption="Portfólio 1">
+                <img loading="lazy" src="images/work1.jpg" alt="Portfólio: Um espaço agradável" class="img-fluid" />
                 <div class="caption">
                   <h6>Um espaço agradável</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work3.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 3"
-              >
-                <img loading="lazy" src="images/work3.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work3.jpg" data-fancybox="gallery" data-caption="Portfólio 3">
+                <img loading="lazy" src="images/work3.jpg" alt="Portfólio: Tratamento impecável" class="img-fluid" />
                 <div class="caption">
                   <h6>Tratamento impecável</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work4.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 4"
-              >
-                <img loading="lazy" src="images/work4.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work4.jpg" data-fancybox="gallery" data-caption="Portfólio 4">
+                <img loading="lazy" src="images/work4.jpg" alt="Portfólio: Projetado para você" class="img-fluid" />
                 <div class="caption">
                   <h6>Projetado para você</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work5.jpg"
-                class="portfolio-popup"
-                data-fancybox="gallery"
-                data-caption="Portfólio 5"
-              >
-                <img loading="lazy" src="images/work5.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work5.jpg" class="portfolio-popup" data-fancybox="gallery" data-caption="Portfólio 5">
+                <img loading="lazy" src="images/work5.jpg" alt="Portfólio: Melhores Profissionais" class="img-fluid" />
                 <div class="caption">
                   <h6>Melhores Profissionais</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work6.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 6"
-              >
-                <img loading="lazy" src="images/work6.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work6.jpg" data-fancybox="gallery" data-caption="Portfólio 6">
+                <img loading="lazy" src="images/work6.jpg" alt="Portfólio: Você merece!" class="img-fluid" />
                 <div class="caption">
                   <h6>Você merece!</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work7.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 7"
-              >
-                <img loading="lazy" src="images/work7.jpg" alt="" />
-
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work7.jpg" data-fancybox="gallery" data-caption="Portfólio 7">
+                <img loading="lazy" src="images/work7.jpg" alt="Portfólio: Sempre Linda!" class="img-fluid" />
                 <div class="caption">
                   <h6>Sempre Linda!</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work8.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 8"
-              >
-                <img loading="lazy" src="images/work8.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work8.jpg" data-fancybox="gallery" data-caption="Portfólio 8">
+                <img loading="lazy" src="images/work8.jpg" alt="Portfólio: Cada dia é uma celebração"
+                  class="img-fluid" />
                 <div class="caption">
                   <h6>Cada dia é uma celebração</h6>
-                  <p></p>
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="content card img-fluid">
-              <a
-                href="images/work9.jpg"
-                data-fancybox="gallery"
-                data-caption="Portfólio 9"
-              >
-                <img loading="lazy" src="images/work9.jpg" alt="" />
+          </article>
+          <article class="col-md-4 col-sm-6 mb-4">
+            <div class="card content">
+              <a href="images/work9.jpg" data-fancybox="gallery" data-caption="Portfólio 9">
+                <img loading="lazy" src="images/work9.jpg" alt="Portfólio: Transformando visuais com arte"
+                  class="img-fluid" />
                 <div class="caption">
-                  <h6>Transformando visuais com arte.</h6>
-                  <p></p>
+                  <h6>Transformando visuais com arte</h6>
                 </div>
               </a>
             </div>
-          </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Seção: Mapa -->
+  <section class="map-mobile container">
+    <div class="col-md">
+      <div id="location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18773.117590835256!2d-46.77938756632395!3d-23.527919058477476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1701536851303!5m2!1sen!2sbr"
+          width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-title animate__animated animate__slideInLeft">
+          <lord-icon src="https://cdn.lordicon.com/tdtlrbly.json" trigger="hover" stroke="light" state="hover-jump-roll"
+            colors="primary:#121331,secondary:#e83a30" style="width: 40px; height: 40px"></lord-icon>
+          <p class="text-sm p-1 font-extralight">
+            <strong class="font-semibold">Endereço:</strong>
+            Rua Dona Primitiva Vianco, n°100 - lj 08 -<br />
+            Centro - Osasco - SP
+          </p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Botão do WhatsApp -->
-    <a
-      href="https://wa.me/+5511942124242"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <div
-        class="whatsapp-message-box d-none d-md-flex animate__animated animate__headShake"
-      >
-        <lord-icon
-          src="https://cdn.lordicon.com/kiynvdns.json"
-          trigger="hover"
-          stroke="light"
-          colors="primary:#121331,secondary:#f28ba8,tertiary:#ffc738,quaternary:#30e849,quinary:#ebe6ef"
-          style="width: 40px; height: 140px; padding-right: 10px"
-        >
-        </lord-icon>
-        <div class="whatsapp-text">
-          <p class="">Oi !</p>
-          <p class="">Podemos te ajudar?</p>
-        </div>
-      </div>
-      <i class="fab fa-whatsapp whatsapp-icon"></i>
-    </a>
+  <!-- Footer -->
+  <footer id="contato" class="text-center" style="background-color: #111; color: #bbb;">
+    <div class="container footer">
+      <h6 class="animate__animated animate__slideInLeft"
+        style="color: #fff; font-size: 35px; font-weight: 700; margin-bottom: 28px; padding-top: 28px;">
+        Salão Loha
+      </h6>
+      <p style="width: 60%; margin: auto; font-weight: 300; text-align: left">
+        Envolva-se na atmosfera acolhedora do Salão Loha, onde cada
+        atendimento é uma experiência personalizada e exclusiva.<br /><br />
+        Com profissionais altamente qualificados e atualizados com as últimas
+        tendências da beleza, nos dedicamos a proporcionar resultados
+        excepcionais em todos os serviços.<br /><br />
+        Seja o cabelo revitalizado, cuidando das unhas, ou transformando o
+        olhar com design de sobrancelhas, no Salão Loha você descobre a beleza
+        em sua essência. Aqui, a beleza e bem-estar caminham de mãos dadas.<br /><br />
+        Agende sua visita e sinta a diferença de um cuidado que vai além da estética.
+      </p>
 
-    <!-- end our work -->
-    <div class="container hidden animate__animated map-mobile">
-      <div class="col-md">
-        <div id="location">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18773.117590835256!2d-46.77938756632395!3d-23.527919058477476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1701536851303!5m2!1sen!2sbr"
-            width="900"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div class="map-title animate__animated animate__slideInLeft">
-            <lord-icon
-              src="https://cdn.lordicon.com/tdtlrbly.json"
-              trigger="hover"
-              stroke="light"
-              state="hover-jump-roll"
-              colors="primary:#121331,secondary:#e83a30"
-              style="width: 40px; height: 40px"
-            >
-            </lord-icon>
-            <p className="text-sm p-1 font-extralight ">
-              <b className="font-semibold">Endereço: </b>Rua Dona Primitiva
-              Vianco, n°100 - lj 08 -
-            </p>
-            <p className="text-sm">Centro - Osasco - SP</p>
-          </div>
-        </div>
+      <ul class="d-flex justify-content-center" style="margin: 40px 0;">
+        <li class="social" style="margin: 0 8px;">
+          <a href="https://www.instagram.com/salaoloha/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li style="margin: 0 8px;">
+          <a href="https://www.facebook.com/salaoloha" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li style="margin: 0 8px;">
+          <a href="https://www.tiktok.com/@lohacabeleireiros" target="_blank">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </li>
+      </ul>
+      <a href="https://www.wbdigitalsolutions.com/" alt="link da WB Digital Solutions" target="_blank"
+        style="color: inherit; text-decoration: none">
+        <span class="wb">WB Digital Solutions © Todos os direitos reservados</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Botão do WhatsApp -->
+  <a href="https://wa.me/+5511942124242" class="whatsapp-float" target="_blank">
+    <div class="whatsapp-message-box d-none d-md-flex animate__animated animate__headShake">
+      <lord-icon src="https://cdn.lordicon.com/kiynvdns.json" trigger="hover" stroke="light"
+        colors="primary:#121331,secondary:#f28ba8,tertiary:#ffc738,quaternary:#30e849,quinary:#ebe6ef"
+        style="width: 40px; height: 140px; padding-right: 10px"></lord-icon>
+      <div class="whatsapp-text">
+        <p>Oi!</p>
+        <p>Podemos te ajudar?</p>
       </div>
     </div>
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+  </a>
 
+  <!-- Scripts -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.min.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
 
-    <!-- footer -->
-
-    <footer
-      class="hidden animate__animated"
-      style="text-align: center; background-color: #111 !important; color: #bbb"
-      id="contato"
-    >
-      <div class="container footer">
-        <h6
-          style="
-            color: #fff;
-            font-size: 35px;
-            font-weight: 700;
-            position: relative;
-            margin-bottom: 28px;
-            padding-top: 28px;
-          "
-          class="animate__animated animate__slideInLeft"
-        >
-          Salão Loha
-        </h6>
-        <p style="width: 60%; margin: auto; font-weight: 300; text-align: left">
-          Envolva-se na atmosfera acolhedora do Salão Loha, onde cada
-          atendimento é uma experiência personalizada e exclusiva. <br /><br />
-          Com profissionais altamente qualificados e atualizados com as últimas
-          tendências da beleza, nos dedicamos a proporcionar resultados
-          excepcionais em todos os serviços. <br /><br />
-          Seja o cabelo revitalizado, cuidando das unhas, ou transformando o
-          olhar com design de sobrancelhas, no Salão Loha você descobre a beleza
-          em sua essência. Aqui, a beleza e bem-estar caminham de mãos dadas.<br /><br />
-          Agende sua visita e sinta a diferença de um cuidado que vai além da
-          estética.
-        </p>
-
-        <ul style="margin: 40px 0; display: flex; justify-content: center">
-          <li class="social" style="display: inline-block; margin: 0 8px">
-            <a href="https://www.instagram.com/salaoloha/" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-
-          <li>
-            <a href="https://www.facebook.com/salaoloha" target="_blank"
-              ><i class="fab fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@lohacabeleireiros"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-          </li>
-        </ul>
-        <a
-          href="https://www.wbdigitalsolutions.com/"
-          alt="link da WB Digital Solutions"
-          target="_blank"
-          style="color: inherit; text-decoration: none"
-        >
-          <span class="wb"
-            >WB Digital Solutions © Todos os direitos reservados</span
-          >
-        </a>
-      </div>
-    </footer>
-
-    <!-- end footer -->
-
-    <!-- script -->
-
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"
-    ></script>
-
-    <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.min.js"
-    ></script>
-    <script defer src="js/main.js"></script>
-  </body>
 </html>
