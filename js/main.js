@@ -89,3 +89,75 @@ var animacao = lottie.loadAnimation({
   autoplay: true,
   path: 'calendar.json',
 });
+
+// Scroll-spy: marca no menu a seção que está em foco na viewport
+(function () {
+  const navLinks = Array.from(
+    document.querySelectorAll('.navbar-nav .nav-link')
+  );
+  const linkBySection = new Map();
+  const sections = [];
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('#') && href.length > 1) {
+      const section = document.querySelector(href);
+      if (section) {
+        linkBySection.set(section, link);
+        sections.push(section);
+      }
+    }
+  });
+
+  if (sections.length) {
+    const setActive = (link) => {
+      navLinks.forEach((l) => l.classList.remove('active'));
+      if (link) link.classList.add('active');
+    };
+
+    const updateActive = () => {
+      // No fim da página, força a última seção (footer/contato), que é curta
+      // demais para alcançar a linha de referência ao rolar até o fim.
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActive(linkBySection.get(sections[sections.length - 1]));
+        return;
+      }
+      // Caso geral: última seção cujo topo passou da linha a 35% da viewport
+      const line = window.innerHeight * 0.35;
+      let current = sections[0];
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= line) current = section;
+      });
+      setActive(linkBySection.get(current));
+    };
+
+    let ticking = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActive();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+    updateActive();
+  }
+
+  // Fecha o menu suspenso no mobile ao clicar em um link
+  const collapse = document.getElementById('navbarSupportedContent');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (collapse && collapse.classList.contains('show')) {
+        collapse.classList.remove('show');
+      }
+    });
+  });
+})();

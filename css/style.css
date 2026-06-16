@@ -827,12 +827,6 @@ footer h6 {
        margin-top: 20px;
        /* ajuste o valor conforme necessário */
      }
-  .navbar {
-    opacity: 0.7;
-  }
-  #navbarSupportedContent {
-    background-color: transparent !important;
-  }
   .services {
     margin-top: 0;
   }
@@ -1162,5 +1156,118 @@ footer h6 {
     bottom: 18px;
     font-size: 12px;
     padding: 8px 13px;
+  }
+}
+
+/* ============================================================
+   NAVBAR — indicador de secao ativa + distribuicao + CTA
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+#inicio,
+#servicos,
+#destaque,
+#portfolio,
+#contato {
+  scroll-margin-top: 110px;
+}
+
+/* Sublinhado animado que sinaliza hover e secao ativa */
+.navbar .navbar-nav li a.nav-link {
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.25s ease;
+}
+.navbar .navbar-nav li a.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #ed3237;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.navbar .navbar-nav li a.nav-link:hover::after,
+.navbar .navbar-nav li a.nav-link.active::after {
+  transform: scaleX(1);
+}
+.navbar .navbar-nav li a.nav-link.active {
+  color: #ed3237;
+}
+
+/* Botao de conversao no menu */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #ed3237;
+  color: #fff !important;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px -7px rgba(237, 50, 55, 0.6);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  background: #c0181d;
+  color: #fff !important;
+  box-shadow: 0 13px 26px -8px rgba(237, 50, 55, 0.7);
+}
+.nav-cta i {
+  font-size: 16px;
+}
+
+/* Desktop estreito: aperta a navbar para o CTA caber sem transbordar */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar.px-5 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .navbar .navbar-brand {
+    font-size: 26px;
+  }
+  .navbar .navbar-nav li {
+    padding: 0 9px;
+  }
+  .nav-cta {
+    margin-left: 4px;
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Menu aberto no mobile (abaixo do breakpoint lg do Bootstrap) */
+@media (max-width: 991.98px) {
+  #navbarSupportedContent.navbar-collapse {
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+    padding: 10px 16px 20px;
+    margin-top: 8px;
+    box-shadow: 0 16px 30px -12px rgba(0, 0, 0, 0.25);
+  }
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+  .navbar .navbar-nav li a.nav-link {
+    display: inline-block;
+    padding: 11px 0 9px;
+  }
+  .nav-cta {
+    margin: 14px auto 4px;
+    justify-content: center;
   }
 }
