@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static single-page marketing website for Salão Loha, a beauty salon in Osasco, São Paulo, Brazil. No build system or package manager - pure HTML/CSS/JS served directly.
+Static single-page marketing website for Salão Loha, a beauty salon in Osasco, São Paulo, Brazil. No build system - pure HTML/CSS/JS served directly. The only `package.json` exists solely to pin the Vercel build Node.js version via `engines.node` (no dependencies, no scripts); there is still no install/build step.
 
 ## Technology Stack
 

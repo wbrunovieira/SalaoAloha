@@ -1,0 +1,9 @@
+{
+  "name": "salao-loha",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site estático do Salão Loha (Osasco, SP)",
+  "engines": {
+    "node": "22.x"
+  }
+}
