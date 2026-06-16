@@ -855,3 +855,312 @@ footer h6 {
     font-size: 12px;
   }
 }
+
+/* ============================================================
+   HERO REDESIGN — "boutique de beleza" (Fraunces + Poppins)
+   ============================================================ */
+:root {
+  --brand: #ed3237;
+  --brand-deep: #c0181d;
+  --hero-ink: #fff;
+}
+
+/* Atmosfera: brilhos quentes sobre o vermelho do body + textura sutil */
+.home-intro {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(125% 90% at 88% 6%, rgba(255, 168, 158, 0.55) 0%, rgba(255, 168, 158, 0) 46%),
+    radial-gradient(95% 85% at -5% 105%, rgba(192, 24, 29, 0.5) 0%, rgba(192, 24, 29, 0) 55%);
+}
+.home-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1.5px);
+  background-size: 22px 22px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+}
+
+/* --- Coluna de texto --- */
+.hero-copy {
+  max-width: 540px;
+  text-align: center;
+  color: var(--hero-ink);
+  padding: 8px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 12px;
+  font-family: Poppins, sans-serif;
+  font-size: clamp(10.5px, 1.3vw, 12.5px);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 34px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(46px, 8vw, 94px);
+  line-height: 0.98;
+  letter-spacing: -0.5px;
+  margin: 18px 0 0;
+  color: #fff;
+  text-shadow: 0 18px 42px rgba(120, 10, 12, 0.28);
+}
+.hero-title em {
+  position: relative;
+  font-style: italic;
+  font-weight: 500;
+}
+.hero-title em::after {
+  content: '';
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: 0.06em;
+  height: 0.07em;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.hero-lead {
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.7;
+  margin: 22px auto 0;
+  max-width: 47ch;
+  color: rgba(255, 255, 255, 0.94);
+}
+.hero-accent {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1px;
+}
+
+/* --- Ações --- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 24px;
+  margin-top: 34px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 14px 13px 26px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow:
+    0 16px 32px -10px rgba(120, 10, 12, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    color 0.35s ease;
+}
+.hero-cta #calendario-animado {
+  width: 34px;
+  height: 34px;
+}
+.hero-cta:hover {
+  transform: translateY(-3px);
+  color: var(--brand-deep);
+  box-shadow: 0 24px 42px -12px rgba(120, 10, 12, 0.6);
+}
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  opacity: 0.92;
+  transition: opacity 0.3s ease;
+}
+.hero-link span {
+  transition: transform 0.3s ease;
+}
+.hero-link:hover {
+  opacity: 1;
+}
+.hero-link:hover span {
+  transform: translateX(5px);
+}
+
+/* --- Figura / imagem --- */
+.hero-figure {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  padding: 22px;
+}
+.hero-figure::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68%;
+  height: 70%;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-radius: 26px;
+  z-index: 0;
+}
+.hero-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow:
+    0 34px 64px -22px rgba(90, 6, 8, 0.62),
+    0 0 0 6px rgba(255, 255, 255, 0.14);
+}
+.hero-badge {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 16px 32px -12px rgba(90, 6, 8, 0.5);
+}
+
+#coracao {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  z-index: 10;
+}
+
+/* --- Entrada escalonada --- */
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-eyebrow,
+.hero-title,
+.hero-lead,
+.hero-actions,
+.hero-figure {
+  animation: heroRise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.hero-eyebrow {
+  animation-delay: 0.05s;
+}
+.hero-title {
+  animation-delay: 0.15s;
+}
+.hero-lead {
+  animation-delay: 0.28s;
+}
+.hero-actions {
+  animation-delay: 0.4s;
+}
+.hero-figure {
+  animation-delay: 0.22s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow,
+  .hero-title,
+  .hero-lead,
+  .hero-actions,
+  .hero-figure {
+    animation: none;
+  }
+}
+
+/* --- Desktop: layout editorial alinhado à esquerda --- */
+@media (min-width: 769px) {
+  .home-intro {
+    height: auto;
+    min-height: 90vh;
+    margin-top: 0;
+    padding: 120px 0 110px !important;
+  }
+  .home-intro > .col-sm-6:first-of-type {
+    justify-content: flex-end !important;
+    padding-right: 42px;
+  }
+  .home-intro > .col-sm-6:last-of-type {
+    justify-content: flex-start !important;
+    padding-left: 42px;
+  }
+  .hero-copy {
+    text-align: left;
+    padding: 0;
+  }
+  .hero-lead {
+    margin-left: 0;
+  }
+  .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Celulares estreitos: eyebrow e titulo mais contidos */
+@media (max-width: 430px) {
+  .hero-eyebrow {
+    letter-spacing: 0.16em;
+    font-size: 10px;
+  }
+  .hero-title {
+    font-size: clamp(40px, 13vw, 52px);
+  }
+  .hero-badge {
+    bottom: 18px;
+    font-size: 12px;
+    padding: 8px 13px;
+  }
+}
